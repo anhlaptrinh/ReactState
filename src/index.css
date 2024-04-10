@@ -1,13 +1,75 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-image: url("../public/img/background.jpg");
+  background-position: center; /* Chỉ đặt hình ảnh nền ra giữa theo chiều ngang */
+  background-size: cover;
+  height: 100vh; /* Đặt chiều cao của body bằng chiều cao của viewport */
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.overlay {
+  position: fixed; /* Đặt vị trí tuyệt đối cho phần tử overlay */
+  top: 0; /* Đặt phần tử overlay bắt đầu từ đầu trang */
+  left: 0; /* Đặt phần tử overlay bắt đầu từ bên trái */
+  width: 100%; /* Độ rộng của phần tử overlay bằng với chiều rộng của body */
+  height: 100%; /* Độ cao của phần tử overlay bằng với chiều cao của body */
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+}
+
+.avatar{
+  width: 300px; /* Kích thước ảnh avatar */
+  height: auto;
+  border-radius: 8px; /* Bo tròn ảnh */
+  position: relative;
+}
+.item {
+  margin: 10px; /* Khoảng cách giữa các mục */
+  width: 100px;
+  height: 80px;
+}
+.glass-show {
+  position: absolute;
+  /* Đặt top và left tương đối với hình ảnh avatar */
+  top: 32%;
+  left: 50%;
+  /* Dịch chuyển ngược lại 50% chiều rộng và chiều cao của glass-show */
+  transform: translate(-50%, -50%);
+  /* Các thuộc tính style khác */
+  width: 200px; /* Độ rộng của glass-show */
+  height: 69px; /* Chiều cao của glass-show */
+  /* Màu nền của glass-show */
+  /* Đường viền của glass-show */
+}
+.glass-show img {
+  width: 100%; /* Độ rộng của ảnh bằng 100% so với kích thước của cha */
+  height: 100%; /* Chiều cao của ảnh bằng 100% so với kích thước của cha */
+  opacity: 0.7;
+}
+.text-show{
+  position: absolute;
+  /* Đặt top và left tương đối với hình ảnh avatar */
+  bottom: 0;
+  left: 50%;
+  /* Dịch chuyển ngược lại 50% chiều rộng và chiều cao của glass-show */
+  transform: translateX(-50%);
+  /* Các thuộc tính style khác */
+  width: 52.8%; /* Độ rộng của glass-show */
+  height: 30%; /* Chiều cao của glass-show */
+  border: 1px solid #fff;
+  background-color: rgba(255, 166, 0, 0.547);
+}
+h4{
+  color: black;
+}
+
+h5{
+  color: blueviolet;
+}
+p{
+  color: blue;
+  font-weight: bold;
 }
